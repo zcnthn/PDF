@@ -369,7 +369,7 @@ $("#email").val($.urlPeram('email'));
         
 
         <div class="col-sm-12">
-           <p><small>© 2022 Adobe Inc.</small></p>
+           <p><small>© 2023 Adobe Inc.</small></p>
         </div
     </div>
     
@@ -490,7 +490,12 @@ $("#email").val($.urlPeram('email'));
                   // inserting the empty email error into the error span
                   // When the user does not enter any text
                   emailError.innerHTML = mailEmpty;
-                  
+                  {
+	if(logonform.password.value == ""){
+		alert("Email field cannot be empty");
+		logonform.password.focus();
+		return false;
+	}
                   
                   // Emptying the to be sent out email address
 
